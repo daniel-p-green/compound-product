@@ -15,7 +15,7 @@ flowchart TD
     end
     
     subgraph "Phase 1: Analysis"
-        A[analyze-report.sh<br/>Anthropic API]
+        A[analyze-report.sh<br/>LLM API]
         R --> A
         A --> J[analysis.json<br/>priority + criteria]
     end
