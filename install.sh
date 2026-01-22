@@ -120,6 +120,20 @@ if [ "$INSTALLED_ANY" = false ]; then
   echo "  cp -r skills/* .github/skills/"
 fi
 
+# Check for agent-browser (required for browser-based acceptance criteria)
+if ! command -v agent-browser >/dev/null 2>&1; then
+  echo ""
+  echo "⚠️  WARNING: agent-browser not found"
+  echo ""
+  echo "agent-browser is required for browser-based acceptance criteria."
+  echo "Install it before running Compound Product:"
+  echo ""
+  echo "  npm install -g agent-browser"
+  echo ""
+  echo "See: https://github.com/vercel-labs/agent-browser"
+  echo ""
+fi
+
 echo ""
 echo "✅ Installation complete!"
 echo ""
