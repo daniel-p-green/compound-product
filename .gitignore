@@ -1,0 +1,22 @@
+# Config (user should create their own)
+compound.config.json
+
+# Logs
+*.log
+
+# Progress files (local state)
+progress.txt
+prd.json
+
+# Archives
+archive/
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Environment
+.env
+.env.local

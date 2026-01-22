@@ -1,0 +1,52 @@
+{
+  "project": "MyApp",
+  "branchName": "compound/fix-checkout-typeerror",
+  "description": "Fix the TypeError in CheckoutForm that breaks checkout for some users",
+  "tasks": [
+    {
+      "id": "T-001",
+      "title": "Identify and fix the undefined 'id' access",
+      "description": "Locate line 145 in CheckoutForm.tsx, understand why the object is undefined, and add proper null checking.",
+      "acceptanceCriteria": [
+        "Identify the object that can be undefined",
+        "Add null/undefined check before accessing .id",
+        "Error no longer appears in error logs",
+        "npm run typecheck passes",
+        "Verify in browser: complete a checkout flow successfully"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "T-002",
+      "title": "Add error boundary for checkout component",
+      "description": "Wrap the checkout form in an error boundary so future errors show a friendly message instead of crashing.",
+      "acceptanceCriteria": [
+        "Create CheckoutErrorBoundary component",
+        "Wrap CheckoutForm with error boundary",
+        "Error boundary shows 'Something went wrong, please try again' message",
+        "Error boundary logs errors to monitoring service",
+        "npm run typecheck passes",
+        "Verify in browser: simulate error and see friendly message"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "T-003",
+      "title": "Add unit tests for checkout edge cases",
+      "description": "Add tests that cover the edge case where the object might be undefined.",
+      "acceptanceCriteria": [
+        "Add test for undefined object scenario",
+        "Add test for successful checkout flow",
+        "All tests pass",
+        "npm run typecheck passes"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}
