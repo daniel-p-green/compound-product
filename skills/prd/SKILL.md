@@ -11,47 +11,40 @@ Create detailed Product Requirements Documents that are clear, actionable, and s
 
 ## The Job
 
-1. Receive a feature description from the user
-2. Ask 3-5 essential clarifying questions (with lettered options)
-3. Generate a structured PRD based on answers
+1. Receive a feature description
+2. **Self-clarify:** Ask yourself 3-5 critical questions and answer them based on context
+3. Generate a structured PRD based on your answers
 4. Save to `/tasks/prd-[feature-name].md`
 
-**Important:** Do NOT start implementing. Just create the PRD.
+**Important:** 
+- Do NOT ask the user questions. Answer them yourself using available context.
+- Do NOT start implementing. Just create the PRD.
 
 ---
 
-## Step 1: Clarifying Questions
+## Step 1: Self-Clarification
 
-Ask only critical questions where the initial prompt is ambiguous. Focus on:
+Before generating the PRD, ask yourself these questions and write your answers. This ensures you've thought through the problem:
 
-- **Problem/Goal:** What problem does this solve?
-- **Core Functionality:** What are the key actions?
-- **Scope/Boundaries:** What should it NOT do?
-- **Success Criteria:** How do we know it's done?
+1. **Problem/Goal:** What problem does this solve? Why now?
+2. **Core Functionality:** What are the 2-3 key actions this enables?
+3. **Scope/Boundaries:** What should this explicitly NOT do?
+4. **Success Criteria:** How do we verify it's working?
+5. **Constraints:** What technical/time constraints exist?
 
-### Format Questions Like This:
+### Format Your Thinking:
 
 ```
-1. What is the primary goal of this feature?
-   A. Improve user onboarding experience
-   B. Increase user retention
-   C. Reduce support burden
-   D. Other: [please specify]
+## Self-Clarification
 
-2. Who is the target user?
-   A. New users only
-   B. Existing users only
-   C. All users
-   D. Admin users only
-
-3. What is the scope?
-   A. Minimal viable version
-   B. Full-featured implementation
-   C. Just the backend/API
-   D. Just the UI
+1. **Problem/Goal:** [Your answer based on the request and codebase context]
+2. **Core Functionality:** [Your answer]
+3. **Scope/Boundaries:** [Your answer - be conservative, prefer smaller scope]
+4. **Success Criteria:** [Your answer - must be verifiable]
+5. **Constraints:** [Your answer - note any mentioned constraints like "no DB migrations"]
 ```
 
-This lets users respond with "1A, 2C, 3B" for quick iteration.
+Use context from: the request, AGENTS.md, existing code patterns, and any reports/analysis provided.
 
 ---
 
@@ -199,9 +192,9 @@ Add priority levels to tasks so users can focus on what matters most.
 
 Before saving the PRD:
 
-- [ ] Asked clarifying questions with lettered options
-- [ ] Incorporated user's answers
-- [ ] Tasks are small and specific
+- [ ] Completed self-clarification (answered all 5 questions)
+- [ ] Tasks are small and specific (completable in one session each)
+- [ ] Acceptance criteria are verifiable (not vague)
 - [ ] Functional requirements are numbered and unambiguous
 - [ ] Non-goals section defines clear boundaries
 - [ ] Saved to `/tasks/prd-[feature-name].md`
