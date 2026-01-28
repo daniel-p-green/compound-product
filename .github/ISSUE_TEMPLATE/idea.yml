@@ -1,0 +1,42 @@
+name: "Idea / Thread"
+description: Capture a raw idea quickly (Inbox)
+title: "Idea: "
+labels: ["inbox", "needs:brief"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is the idea? Why might it matter?
+      placeholder: "In one paragraph..."
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / Links
+      description: Paste links, screenshots, notes, relevant threads.
+      placeholder: "Links, quotes, screenshots..."
+    validations:
+      required: false
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - feature
+        - bug
+        - research
+        - chore
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - high
+        - medium
+        - low
+    validations:
+      required: true

@@ -1,0 +1,39 @@
+name: "Agent Task Pack"
+description: Break a brief into small pass/fail tasks suitable for autonomous execution
+title: "Tasks: "
+labels: ["brief:ready"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Only mark **agent:ok** when tasks are small, bounded, and have pass/fail criteria.
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Task checklist (pass/fail)
+      description: 8–15 small tasks. Each should be objectively checkable.
+      placeholder: |
+        - [ ] Task 1 (pass/fail)
+        - [ ] Task 2 (pass/fail)
+    validations:
+      required: true
+  - type: textarea
+    id: quality
+    attributes:
+      label: Quality checks
+      description: Commands to run (tests/lint/typecheck) before marking done.
+      placeholder: |
+        - npm test
+        - npm run lint
+    validations:
+      required: false
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety boundaries
+      description: What the agent must NOT do (deploy, touch prod, spend money, etc.).
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: "When ready for autonomous execution, add label **agent:ok**."

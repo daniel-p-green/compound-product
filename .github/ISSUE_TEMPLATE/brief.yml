@@ -1,0 +1,43 @@
+name: "Brief (Shaping)"
+description: Turn an idea into an executable brief
+title: "Brief: "
+labels: ["needs:brief"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is broken/missing? Who experiences it? Evidence?
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Outcome / Success Metric
+      description: One metric or binary success condition. How will we measure?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Constraints / Non-goals
+      description: What we will NOT do.
+    validations:
+      required: false
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks / Unknowns
+    validations:
+      required: false
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: Definition of Done
+      options:
+        - label: Acceptance criteria written as pass/fail
+        - label: Tests/quality checks identified
+        - label: Docs updated (if behavior changed)
+  - type: markdown
+    attributes:
+      value: "When complete, add label **brief:ready**."

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Playbook
+    url: https://github.com/daniel-p-green/compound-product
+    about: Read the operating system playbook in this repo.
